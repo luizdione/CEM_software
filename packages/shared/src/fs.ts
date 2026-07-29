@@ -1,5 +1,5 @@
 import { constants as fsConstants } from 'node:fs';
-import { access, mkdir, readFile, writeFile, stat, readdir, rm, copyFile } from 'node:fs/promises';
+import { access, mkdir, readFile, writeFile, rename, stat, readdir, rm, copyFile } from 'node:fs/promises';
 import { homedir } from 'node:os';
 import { dirname, join, resolve, sep } from 'node:path';
 
@@ -32,10 +32,45 @@ export async function readText(target: string): Promise<string> {
   return readFile(target, 'utf8');
 }
 
-/** Write a UTF-8 text file, creating parent directories as needed. */
+/**
+ * Write a UTF-8 text file, creating parent directories as needed.
+ *
+ * The write is atomic: content is written to a temporary sibling which is then
+ * renamed over the target. A crash mid-write (power loss, a GPU-driver reset
+ * that takes the whole app down) can therefore never leave a truncated or
+ * half-written file — a later read always sees either the previous complete
+ * file or the new one. CEM's own state files (config, history) are otherwise
+ * easy to corrupt when the machine dies while they are being saved, which then
+ * prevents the app from starting.
+ */
 export async function writeText(target: string, content: string): Promise<void> {
   await ensureDir(dirname(target));
-  await writeFile(target, content, 'utf8');
+  const tmp = `${target}.tmp-${process.pid}-${Math.random().toString(36).slice(2, 10)}`;
+  try {
+    await writeFile(tmp, content, 'utf8');
+    await renameWithRetry(tmp, target);
+  } catch (error) {
+    await rm(tmp, { force: true }).catch(() => undefined);
+    throw error;
+  }
+}
+
+/**
+ * `rename` over an existing file is atomic, but on Windows it can transiently
+ * fail with EPERM/EBUSY when an antivirus or sync client (e.g. OneDrive) holds
+ * the file open for a moment. Retry a few times with a short backoff before
+ * surfacing the error.
+ */
+async function renameWithRetry(from: string, to: string, attempts = 5): Promise<void> {
+  for (let attempt = 1; ; attempt++) {
+    try {
+      await rename(from, to);
+      return;
+    } catch (error) {
+      if (attempt >= attempts) throw error;
+      await new Promise((resolve) => setTimeout(resolve, 40 * attempt));
+    }
+  }
 }
 
 /** Parse a JSON file into a typed value. */

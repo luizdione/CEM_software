@@ -1,4 +1,4 @@
-import { pathExists, readJson, writeJson } from '@cem/shared';
+import { copyFileEnsured, pathExists, readJson, writeJson } from '@cem/shared';
 import { getCemBackupsDir, getCemConfigPath, type PathEnv } from './paths.js';
 
 export type ThemePreference = 'light' | 'dark' | 'system';
@@ -34,14 +34,22 @@ export function defaultConfig(env?: PathEnv): CemAppConfig {
   };
 }
 
-/** Load CEM config, returning defaults when the file is absent. */
+/** Load CEM config, returning defaults when the file is absent or unreadable. */
 export async function loadConfig(configPath?: string, env?: PathEnv): Promise<CemAppConfig> {
   const path = configPath ?? getCemConfigPath(env);
   if (!(await pathExists(path))) {
     return defaultConfig(env);
   }
-  const parsed = await readJson<Partial<CemAppConfig>>(path);
-  return { ...defaultConfig(env), ...parsed, telemetry: false };
+  try {
+    const parsed = await readJson<Partial<CemAppConfig>>(path);
+    return { ...defaultConfig(env), ...parsed, telemetry: false };
+  } catch {
+    // A truncated or malformed config (e.g. the machine lost power mid-save)
+    // must never stop CEM from launching. Preserve the bad file for inspection
+    // and fall back to defaults; the next save rewrites a clean config.
+    await copyFileEnsured(path, `${path}.corrupt`).catch(() => undefined);
+    return defaultConfig(env);
+  }
 }
 
 /** Persist CEM config to disk. */
