@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import type {
   Inventory,
+  InventoryError,
   GpuSection,
   InventoryHost,
   CondaSection,
@@ -12,10 +13,25 @@ import type {
   ScriptConfigEntry,
   BackupCheckItem,
 } from '@cem/server-inventory';
-import { isSectionError } from '@cem/server-inventory';
 import { cem } from '../cem-api.js';
 import { PageHead, Card, StatCard, Badge, Bar, Spinner, EmptyState, useAsync } from '../components/common.js';
 import { formatDate, formatNumber } from '../format.js';
+
+/**
+ * Local copy of the package's type guard. Defined here — rather than imported
+ * from `@cem/server-inventory` — so the renderer never pulls the Node-only
+ * collector runtime (child_process/fs, and @cem/shared's crypto) into the
+ * browser bundle. The renderer only ever consumes the package's *types* and
+ * talks to the collector through IPC (`cem.*`).
+ */
+function isSectionError<T>(section: T | InventoryError): section is InventoryError {
+  return (
+    typeof section === 'object' &&
+    section !== null &&
+    'erro' in section &&
+    !('disponivel' in section)
+  );
+}
 
 type TabId = 'overview' | 'gpu' | 'environments' | 'wsl' | 'docker' | 'software' | 'scripts' | 'backup';
 
