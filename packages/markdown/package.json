@@ -1,6 +1,6 @@
 {
   "name": "@cem/markdown",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Markdown analysis for CEM: token/line stats, reference extraction and content-overlap detection.",
   "type": "module",
   "license": "MIT",

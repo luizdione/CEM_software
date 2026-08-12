@@ -6,7 +6,7 @@
 
 [![CI](https://github.com/luizdione/CEM_software/actions/workflows/ci.yml/badge.svg)](https://github.com/luizdione/CEM_software/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![Semantic Versioning](https://img.shields.io/badge/semver-1.3.2-green.svg)](https://semver.org)
+[![Semantic Versioning](https://img.shields.io/badge/semver-1.4.0-green.svg)](https://semver.org)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg)](https://nodejs.org)
 
 </div>
@@ -53,6 +53,7 @@ Claude Code, install CEM, import the `.cem`, and your environment is back.
 | **Token Usage (temporal)** | Real consumption over **24h / 3d / 7d / 30d** per session & project from local transcripts: context‑window reading vs cache building vs output; main session vs workflow agents; git/GitHub activity; skill/agent launches — with statistical improvement proposals (branch heavy sessions, shrink heavy `CLAUDE.md`/skills, batch pushes) |
 | **Profiles** | Activate a subset of config/docs per workflow (Development, Research, Bioinformatics, Python, Next.js, Docker, …) |
 | **Diagnostics** | Orphan references, broken MCP configs, duplicates, token bloat |
+| **Server Inventory** | Read‑only machine inventory: host/CPU/disks/RAM, NVIDIA GPU (VRAM, clocks, power, temp, throttle) with the Windows **"sysmem fallback"** metric invisible to `nvidia-smi`, conda envs, WSL, Docker, installed programs, CLI tools and config scripts — with threshold alerts and a backup‑readiness checklist |
 | **Solve problems** | One click proposes the best fix per finding; you **accept or ignore** each — with automatic backups and audit logging (`cem fix`) |
 | **Backup / Restore** | Create and restore `.cem` archives with checksums, integrity verification and selective restore |
 | **Encryption** | AES‑256‑GCM payload encryption with Argon2id key derivation + Ed25519 signing primitives |

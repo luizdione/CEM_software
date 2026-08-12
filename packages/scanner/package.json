@@ -1,6 +1,6 @@
 {
   "name": "@cem/scanner",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Intelligent scanner that discovers Claude Code artifacts across documented local locations (read-only).",
   "type": "module",
   "license": "MIT",

@@ -41,6 +41,9 @@ export const IPC = {
   updatePreBackup: 'cem:update:preBackup',
   /** Event channel: main → renderer update status pushes. */
   updateStatus: 'cem:update:status',
+  inventoryLoad: 'cem:inventory:load',
+  inventoryCollect: 'cem:inventory:collect',
+  inventoryLoadFile: 'cem:inventory:loadFile',
 } as const;
 
 export type IpcChannel = (typeof IPC)[keyof typeof IPC];

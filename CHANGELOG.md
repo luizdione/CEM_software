@@ -6,6 +6,25 @@ All notable changes to this project are documented here. The format is based on
 
 ## [Unreleased]
 
+## [1.4.0] - 2026-08-11
+
+### Added
+
+- **Server Inventory** — a new read-only section that inventories the whole machine, not just the
+  Claude Code environment: host/CPU/disks/RAM, NVIDIA GPU (utilization, VRAM, clocks, power,
+  temperature, throttle reasons), conda environments, WSL distros, Docker, installed programs, CLI
+  tools and config scripts. It surfaces threshold-based alerts (VRAM/RAM/disk pressure, GPU thermal
+  and clock anomalies, `torch` CUDA vs. driver mismatch) and a backup-readiness checklist. Includes
+  the Windows **"sysmem fallback"** metric — VRAM that has spilled into system RAM over PCIe, which
+  `nvidia-smi` does not expose. Collect on demand (the last snapshot is cached) or load a previously
+  exported `inventario.json`.
+- New workspace package **`@cem/server-inventory`**: a native TypeScript collector (re-orchestrating
+  `nvidia-smi`, PowerShell/WMI, `wsl`, `docker` and on-disk `conda-meta` reads from the Electron main
+  process) plus a pure threshold analyzer. Ported from the standalone **`lupa_servidor`** tool.
+  **Read-only:** no remediation actions from the original tool were ported (CEM keeps its own
+  `@cem/diagnostics` remediation engine); the `reparo` field is preserved in the schema but wired to
+  nothing.
+
 ## [1.3.2] - 2026-07-12
 
 ### Fixed

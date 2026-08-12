@@ -21,6 +21,7 @@ const bundledDeps = [
   '@cem/restore',
   '@cem/sync',
   '@cem/usage',
+  '@cem/server-inventory',
   // Third-party deps of the @cem packages: bundle them too so the packaged
   // main process is self-contained and needs no runtime node_modules.
   'hash-wasm',

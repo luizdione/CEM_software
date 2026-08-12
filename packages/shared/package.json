@@ -1,6 +1,6 @@
 {
   "name": "@cem/shared",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Shared primitives for CEM: Result type, errors, logging, filesystem and formatting helpers.",
   "type": "module",
   "license": "MIT",

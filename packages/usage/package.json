@@ -1,6 +1,6 @@
 {
   "name": "@cem/usage",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Temporal token-usage analytics for CEM: parses local Claude Code session transcripts (read-only) into per-session/per-project consumption with recommendations.",
   "type": "module",
   "license": "MIT",

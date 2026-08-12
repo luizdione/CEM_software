@@ -1,6 +1,6 @@
 {
   "name": "cem-monorepo",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "private": true,
   "description": "Claude Environment Manager (CEM) — backup, restore, manage and migrate Claude Code environments.",
   "type": "module",

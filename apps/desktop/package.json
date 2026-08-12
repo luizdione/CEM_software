@@ -1,6 +1,6 @@
 {
   "name": "@cem/desktop",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Claude Environment Manager desktop application (Electron + React).",
   "type": "module",
   "license": "MIT",
@@ -29,6 +29,7 @@
     "@cem/profiles": "workspace:*",
     "@cem/restore": "workspace:*",
     "@cem/scanner": "workspace:*",
+    "@cem/server-inventory": "workspace:*",
     "@cem/shared": "workspace:*",
     "@cem/sync": "workspace:*",
     "@cem/usage": "workspace:*",

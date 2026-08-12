@@ -1,6 +1,6 @@
 {
   "name": "@cem/cli",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Command-line interface for the Claude Environment Manager (cem).",
   "type": "module",
   "license": "MIT",

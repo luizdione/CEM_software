@@ -1,6 +1,6 @@
 {
   "name": "@cem/backup",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Backup engine for CEM: plans artifacts into the .cem archive format with checksums and optional encryption.",
   "type": "module",
   "license": "MIT",

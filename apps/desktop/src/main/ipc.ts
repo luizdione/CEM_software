@@ -57,8 +57,10 @@ import {
 } from '@cem/restore';
 import { IPC } from '../shared/ipc.js';
 import { exportPlan, type PlanExportRequest } from './plan.js';
+import { loadCachedInventory, runCollectInventory, pickAndLoadInventoryFile } from './inventory.js';
+import type { CollectOptions } from '@cem/server-inventory';
 
-const CEM_VERSION = '1.3.2';
+const CEM_VERSION = '1.4.0';
 
 async function tokenReport(options: ScanOptions) {
   const scan = await scanEnvironment({ ...options, computeTokens: true });
@@ -197,6 +199,12 @@ export function registerIpcHandlers(): void {
   });
   ipcMain.handle(IPC.listSkills, (_e, options: ScanOptions = {}) => listSkills(options));
   ipcMain.handle(IPC.listAgents, (_e, options: ScanOptions = {}) => listAgents(options));
+
+  ipcMain.handle(IPC.inventoryLoad, () => loadCachedInventory());
+  ipcMain.handle(IPC.inventoryCollect, (_e, options: CollectOptions = {}) =>
+    runCollectInventory(options),
+  );
+  ipcMain.handle(IPC.inventoryLoadFile, () => pickAndLoadInventoryFile());
 
   ipcMain.handle(IPC.listProfiles, () => loadProfiles());
   ipcMain.handle(IPC.createProfile, async (_e, input: CreateProfileInput) => {

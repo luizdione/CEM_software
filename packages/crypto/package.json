@@ -1,6 +1,6 @@
 {
   "name": "@cem/crypto",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Cryptography for CEM: AES-256-GCM, Argon2id key derivation, SHA-256 checksums and Ed25519 signatures.",
   "type": "module",
   "license": "MIT",
