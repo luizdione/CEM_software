@@ -1,6 +1,6 @@
 {
   "name": "@cem/profiles",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Profile manager for CEM: create, persist and apply activation profiles that scope artifacts.",
   "type": "module",
   "license": "MIT",

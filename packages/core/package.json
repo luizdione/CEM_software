@@ -1,6 +1,6 @@
 {
   "name": "@cem/core",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Core domain model for CEM: Claude Code location catalog, token estimation, .cem manifest and app config.",
   "type": "module",
   "license": "MIT",

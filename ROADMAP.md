@@ -33,6 +33,18 @@ input is welcome — open a discussion or issue to propose changes.
 - Public extension API so third‑party modules can add scanners, exporters and views.
 - Community profile & skill templates gallery.
 
+## 🖥️ 1.4 — Server Inventory (shipped)
+
+- ✅ **Server Inventory shipped** (`@cem/server-inventory`, desktop *Server Inventory* view) — a
+  read‑only inventory of the whole machine (host/CPU/disks/RAM, NVIDIA GPU, conda, WSL, Docker,
+  installed programs, CLI tools, config scripts) with threshold‑based alerts and a backup‑readiness
+  checklist. Collected natively from the Electron main process (no Python runtime). See
+  [`docs/server-inventory.md`](./docs/server-inventory.md).
+- Includes the Windows **"sysmem fallback"** GPU‑memory metric (VRAM spilled into system RAM over
+  PCIe) that `nvidia-smi` does not expose.
+- Ported from the standalone `lupa_servidor` tool; **read‑only** — no remediation actions were
+  ported (CEM keeps its own `@cem/diagnostics` remediation engine).
+
 ## 🧪 Ongoing
 
 - Broader test coverage (UI, performance, migration matrices).

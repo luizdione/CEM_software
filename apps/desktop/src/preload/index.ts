@@ -47,6 +47,9 @@ const api = {
     ipcRenderer.on(IPC.updateStatus, listener);
     return () => ipcRenderer.removeListener(IPC.updateStatus, listener);
   },
+  inventoryLoad: () => ipcRenderer.invoke(IPC.inventoryLoad),
+  inventoryCollect: (options?: unknown) => ipcRenderer.invoke(IPC.inventoryCollect, options),
+  inventoryLoadFile: () => ipcRenderer.invoke(IPC.inventoryLoadFile),
 };
 
 contextBridge.exposeInMainWorld('cem', api);

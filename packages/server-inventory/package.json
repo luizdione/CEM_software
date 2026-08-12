@@ -1,7 +1,7 @@
 {
-  "name": "@cem/diagnostics",
+  "name": "@cem/server-inventory",
   "version": "1.4.0",
-  "description": "Diagnostics for CEM: detect orphans, broken MCP configs, duplicates, token bloat and token rollups.",
+  "description": "Read-only machine inventory for CEM: natively collects host/CPU/disks, GPU (incl. Windows sysmem-fallback VRAM), conda, WSL, Docker, installed programs, CLIs and config scripts, then derives threshold-based alerts. Ported from the standalone 'lupa_servidor' tool.",
   "type": "module",
   "license": "MIT",
   "main": "./dist/index.js",
@@ -23,11 +23,7 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "@cem/shared": "workspace:*",
-    "@cem/core": "workspace:*",
-    "@cem/scanner": "workspace:*",
-    "@cem/mcp": "workspace:*",
-    "@cem/markdown": "workspace:*"
+    "@cem/shared": "workspace:*"
   },
   "devDependencies": {
     "tsup": "^8.3.5",

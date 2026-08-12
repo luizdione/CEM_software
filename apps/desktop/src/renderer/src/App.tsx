@@ -10,6 +10,7 @@ import { ProfilesView } from './views/ProfilesView.js';
 import { DiagnosticsView } from './views/DiagnosticsView.js';
 import { TokensView } from './views/TokensView.js';
 import { UsageView } from './views/UsageView.js';
+import { ServerInventoryView } from './views/ServerInventoryView.js';
 import { BackupView } from './views/BackupView.js';
 import { RestoreView } from './views/RestoreView.js';
 import { HistoryView } from './views/HistoryView.js';
@@ -23,6 +24,7 @@ const NAV: NavGroup[] = [
       { id: 'dashboard', label: 'Dashboard', icon: '◆' },
       { id: 'scanner', label: 'Scanner', icon: '⌕' },
       { id: 'diagnostics', label: 'Diagnostics', icon: '✚' },
+      { id: 'server-inventory', label: 'Server Inventory', icon: '▤' },
       { id: 'tokens', label: 'Token Analyzer', icon: '∑' },
       { id: 'usage', label: 'Token Usage', icon: '◔' },
     ],
@@ -91,6 +93,7 @@ export function App(): JSX.Element {
         {active === 'plugins' && <PluginsView />}
         {active === 'profiles' && <ProfilesView />}
         {active === 'diagnostics' && <DiagnosticsView />}
+        {active === 'server-inventory' && <ServerInventoryView />}
         {active === 'tokens' && <TokensView />}
         {active === 'usage' && <UsageView />}
         {active === 'backup' && <BackupView />}

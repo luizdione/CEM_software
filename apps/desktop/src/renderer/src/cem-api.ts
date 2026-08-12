@@ -18,6 +18,7 @@ import type { BackupResult } from '@cem/backup';
 import type { VerifyResult, RestorePlanItem, RestoreResult } from '@cem/restore';
 import type { SyncStatus, SyncResult } from '@cem/sync';
 import type { UsageReport, UsageWindow } from '@cem/usage';
+import type { Inventory, CollectOptions } from '@cem/server-inventory';
 
 export interface BackupRequest {
   outDir?: string;
@@ -128,6 +129,9 @@ export interface CemApi {
   syncInit(remote?: string): Promise<SyncResult>;
   syncPush(args: { message?: string; push?: boolean }): Promise<SyncResult>;
   syncPull(): Promise<SyncResult>;
+  inventoryLoad(): Promise<Inventory | null>;
+  inventoryCollect(options?: CollectOptions): Promise<Inventory>;
+  inventoryLoadFile(): Promise<{ ok: boolean; inventory?: Inventory; reason?: string }>;
 }
 
 declare global {

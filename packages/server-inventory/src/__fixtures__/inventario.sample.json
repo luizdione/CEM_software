@@ -1,0 +1,642 @@
+{
+  "meta": {
+    "gerado_em": "2026-08-11T14:16:14-03:00",
+    "versao_coletor": "1.0",
+    "raizes_scripts": [
+      "C:\\Users\\testuser\\OneDrive\\Data_Science\\Projetos",
+      "C:/github",
+      "C:\\Users\\testuser\\.claude"
+    ],
+    "wsl_inspecionado": false
+  },
+  "host": {
+    "hostname": "TEST-HOST",
+    "os": "Windows 11",
+    "os_versao": "10.0.26200",
+    "arquitetura": "AMD64",
+    "python_coletor": "3.13.9",
+    "os_nome": "Microsoft Windows 11 Pro",
+    "os_build": "26200",
+    "ram_total_gb": 31.9,
+    "ram_livre_gb": 14.9,
+    "ram_uso_pct": 53.2,
+    "ultimo_boot": "/Date(1786409727500)/",
+    "cpu": {
+      "modelo": "AMD Ryzen 5 5500",
+      "nucleos_fisicos": 6,
+      "nucleos_logicos": 12,
+      "clock_max_mhz": 3600,
+      "clock_atual_mhz": 3600,
+      "cache_l3_kb": 16384,
+      "virtualizacao_firmware": true
+    },
+    "discos": [
+      {
+        "unidade": "C:",
+        "rotulo": "SSD Sistema",
+        "fs": "NTFS",
+        "total_gb": 930.5,
+        "livre_gb": 61.6,
+        "uso_pct": 93.4
+      },
+      {
+        "unidade": "D:",
+        "rotulo": "SSD Slave",
+        "fs": "NTFS",
+        "total_gb": 1907.7,
+        "livre_gb": 1517.3,
+        "uso_pct": 20.5
+      },
+      {
+        "unidade": "E:",
+        "rotulo": "Metadados",
+        "fs": "NTFS",
+        "total_gb": 1863.0,
+        "livre_gb": 206.8,
+        "uso_pct": 88.9
+      }
+    ],
+    "discos_fisicos": [
+      {
+        "modelo": "KINGSTON SNV2S2000G",
+        "tipo": "SSD",
+        "tamanho_gb": 1863,
+        "barramento": "NVMe",
+        "saude": "Healthy"
+      },
+      {
+        "modelo": "SanDisk Extreme 1TB X3N",
+        "tipo": "SSD",
+        "tamanho_gb": 932,
+        "barramento": "NVMe",
+        "saude": "Healthy"
+      },
+      {
+        "modelo": "M.2 2280 NVMe SSD 2TB",
+        "tipo": "SSD",
+        "tamanho_gb": 1908,
+        "barramento": "NVMe",
+        "saude": "Healthy"
+      }
+    ],
+    "placa_mae": "Micro-Star International Co., Ltd. B550M PRO-VDH WIFI (MS-7C95)",
+    "pentes_ram": [
+      {
+        "fabricante": "Unknown",
+        "capacidade_gb": 16.0,
+        "velocidade_mhz": 2667,
+        "clock_configurado_mhz": 2667
+      },
+      {
+        "fabricante": "Unknown",
+        "capacidade_gb": 16.0,
+        "velocidade_mhz": 2667,
+        "clock_configurado_mhz": 2667
+      }
+    ]
+  },
+  "gpu": {
+    "disponivel": true,
+    "gpus": [
+      {
+        "indice": "0",
+        "nome": "NVIDIA GeForce RTX 3060",
+        "driver": "610.88",
+        "vbios": "94.06.2f.40.e3",
+        "uuid": "GPU-bace7713-15c3-6704-9c6e-a8955a42b18e",
+        "vram_total_mib": 12288.0,
+        "vram_usada_mib": 474.0,
+        "vram_livre_mib": 11640.0,
+        "vram_reservada_mib": 175.0,
+        "vram_uso_pct": 3.9,
+        "util_gpu_pct": 3.0,
+        "util_mem_pct": 0.0,
+        "temperatura_c": 43.0,
+        "fan_pct": 0.0,
+        "potencia_w": 13.14,
+        "potencia_limite_w": 161.5,
+        "potencia_limite_max_w": 187.0,
+        "potencia_limite_padrao_w": 170.0,
+        "clock_sm_mhz": 210.0,
+        "clock_sm_max_mhz": 2100.0,
+        "clock_mem_mhz": 405.0,
+        "clock_mem_max_mhz": 7501.0,
+        "pcie_gen": "1/3",
+        "pcie_largura": "x16/x16",
+        "modo_computacao": "Default",
+        "modo_persistencia": "[N/A]",
+        "display_ativo": "Disabled"
+      }
+    ],
+    "processos": [
+      {
+        "pid": "3864",
+        "nome": "C:\\Windows\\System32\\ShellHost.exe",
+        "vram_mib": "[N/A]",
+        "tipo": "compute",
+        "linha_comando": "\"C:\\Windows\\System32\\ShellHost.exe\"",
+        "iniciado_em": "/Date(1786409804118)/",
+        "ram_gb": 0.0
+      },
+      {
+        "pid": "21988",
+        "nome": "C:\\Program Files\\Docker\\Docker\\frontend\\Docker Desktop.exe",
+        "vram_mib": "[N/A]",
+        "tipo": "compute",
+        "linha_comando": "\"C:\\Program Files\\Docker\\Docker\\frontend\\Docker Desktop.exe\" --type=gpu-process",
+        "iniciado_em": "/Date(1786409853660)/",
+        "ram_gb": 0.0
+      }
+    ],
+    "avisos": [],
+    "motivos_throttle": {
+      "Idle": "Active",
+      "Applications Clocks Setting": "Not Active",
+      "SW Power Cap": "Not Active",
+      "HW Slowdown": "Not Active",
+      "HW Thermal Slowdown": "Not Active",
+      "HW Power Brake Slowdown": "Not Active",
+      "Sync Boost": "Not Active",
+      "SW Thermal Slowdown": "Not Active",
+      "Display Clock Setting": "Not Active"
+    },
+    "throttle_ativo": [
+      "Idle"
+    ],
+    "processos_todos": [
+      {
+        "pid": "3864",
+        "tipo": "C+G",
+        "nome": "...indows\\System32\\ShellHost.exe",
+        "vram_mib": "N/A"
+      },
+      {
+        "pid": "21988",
+        "tipo": "C+G",
+        "nome": "...r\\frontend\\Docker Desktop.exe",
+        "vram_mib": "N/A"
+      }
+    ],
+    "n_processos_graficos": 23,
+    "memoria_por_processo": [
+      {
+        "pid": "1836",
+        "vram_gb": 0.19,
+        "ram_gb": 0.0,
+        "total_gb": 0.19,
+        "nome": "dwm.exe",
+        "linha_comando": null
+      }
+    ],
+    "sysmem_fallback_gb": 0.0
+  },
+  "config_desempenho": {
+    "windows": {
+      "plano_energia": "GUID do Esquema de Energia: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c  (Alto desempenho)",
+      "plano_alto_desempenho": true,
+      "hags_hwschmode": null,
+      "hags_ativo": null,
+      "hags_indeterminado": true,
+      "tdrlevel": null,
+      "tdrdelay": "8",
+      "tdrddidelay": null,
+      "pagefile": [
+        {
+          "Name": "D:\\pagefile.sys",
+          "AllocatedBaseSize": 63488,
+          "CurrentUsage": 3512,
+          "PeakUsage": 10283
+        }
+      ],
+      "vbs_status": 2,
+      "vbs_ativo": true,
+      "antivirus": [
+        {
+          "nome": "Kaspersky",
+          "estado": 266240
+        },
+        {
+          "nome": "Kaspersky",
+          "estado": 266240
+        },
+        {
+          "nome": "Windows Defender",
+          "estado": 393472
+        }
+      ]
+    },
+    "nvidia": {
+      "nvtweak": {
+        "OverridePRR": 1
+      }
+    },
+    "variaveis_ambiente": {
+      "CUDA_PATH": "C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.6",
+      "PYTORCH_CUDA_ALLOC_CONF": "garbage_collection_threshold:0.8,max_split_size_mb:512",
+      "TEMP": "C:\\Users\\testuser\\AppData\\Local\\Temp",
+      "TMP": "C:\\Users\\testuser\\AppData\\Local\\Temp"
+    },
+    "recomendacoes_leitura": [
+      "Painel de Controle NVIDIA > Gerenciar configuracoes 3D > 'CUDA - Sysmem Fallback Policy': para cargas CUDA pesadas, use 'Prefer No Sysmem Fallback' (falha rapido em vez de degradar)."
+    ],
+    "env_persistente_usuario": {},
+    "env_persistente_maquina": {}
+  },
+  "conda": {
+    "disponivel": true,
+    "instalacoes": [
+      "C:\\Users\\testuser\\miniforge3"
+    ],
+    "condarc": {
+      "caminho": "C:\\Users\\testuser\\miniforge3\\.condarc",
+      "conteudo": "channels:\n  - conda-forge\nmirrored_channels:\n  conda-forge:\n    - https://conda.anaconda.org/conda-forge\n    - https://prefix.dev/conda-forge\n\n"
+    },
+    "ambientes": [
+      {
+        "nome": "base",
+        "caminho": "C:\\Users\\testuser\\miniforge3",
+        "python": "3.13.12",
+        "total_pacotes": 367,
+        "n_conda": 203,
+        "n_pip": 164,
+        "destaques": {
+          "biopython": {
+            "versao": "1.87",
+            "origem": "pip",
+            "categoria": "estrutural"
+          },
+          "cuda-version": {
+            "versao": "13.2",
+            "origem": "conda",
+            "categoria": "ml_gpu"
+          },
+          "matplotlib": {
+            "versao": "3.10.8",
+            "origem": "conda",
+            "categoria": "dados"
+          }
+        },
+        "pacotes": {
+          "biopython": "1.87",
+          "cuda-version": "13.2",
+          "matplotlib": "3.10.8"
+        },
+        "torch": "2.11.0"
+      },
+      {
+        "nome": "datascience",
+        "caminho": "C:\\Users\\testuser\\miniforge3\\envs\\datascience",
+        "python": "3.11.15",
+        "total_pacotes": 597,
+        "n_conda": 354,
+        "n_pip": 243,
+        "destaques": {
+          "biopython": {
+            "versao": "1.84",
+            "origem": "pip",
+            "categoria": "estrutural"
+          },
+          "biotite": {
+            "versao": "1.6.0",
+            "origem": "pip",
+            "categoria": "estrutural"
+          },
+          "cuda-version": {
+            "versao": "12.6",
+            "origem": "conda",
+            "categoria": "ml_gpu"
+          }
+        },
+        "pacotes": {
+          "biopython": "1.84",
+          "biotite": "1.6.0",
+          "cuda-version": "12.6"
+        },
+        "torch": "2.5.1+cu121",
+        "torch_cuda": "12.1"
+      },
+      {
+        "nome": "foldgpu",
+        "caminho": "C:\\Users\\testuser\\miniforge3\\envs\\foldgpu",
+        "python": "3.11.15",
+        "total_pacotes": 89,
+        "n_conda": 19,
+        "n_pip": 70,
+        "destaques": {
+          "biopython": {
+            "versao": "1.84",
+            "origem": "pip",
+            "categoria": "estrutural"
+          },
+          "boltz": {
+            "versao": "2.2.1",
+            "origem": "pip",
+            "categoria": "estrutural"
+          },
+          "fair_esm": {
+            "versao": "2.0.0",
+            "origem": "pip",
+            "categoria": "estrutural"
+          }
+        },
+        "pacotes": {
+          "biopython": "1.84",
+          "boltz": "2.2.1",
+          "fair_esm": "2.0.0"
+        },
+        "torch": "2.6.0+cu124",
+        "torch_cuda": "12.4"
+      },
+      {
+        "nome": "llm",
+        "caminho": "C:\\Users\\testuser\\miniforge3\\envs\\llm",
+        "python": "3.11.15",
+        "total_pacotes": 120,
+        "n_conda": 19,
+        "n_pip": 101,
+        "destaques": {
+          "polars": {
+            "versao": "1.39.3",
+            "origem": "pip",
+            "categoria": "dados"
+          }
+        },
+        "pacotes": {
+          "polars": "1.39.3"
+        }
+      },
+      {
+        "nome": "molviz",
+        "caminho": "C:\\Users\\testuser\\miniforge3\\envs\\molviz",
+        "python": "3.11.15",
+        "total_pacotes": 53,
+        "n_conda": 19,
+        "n_pip": 34,
+        "destaques": {
+          "numpy": {
+            "versao": "2.4.6",
+            "origem": "pip",
+            "categoria": "dados"
+          },
+          "onnxruntime": {
+            "versao": "1.27.0",
+            "origem": "pip",
+            "categoria": "ml_gpu"
+          }
+        },
+        "pacotes": {
+          "numpy": "2.4.6",
+          "onnxruntime": "1.27.0"
+        }
+      },
+      {
+        "nome": "qm",
+        "caminho": "C:\\Users\\testuser\\miniforge3\\envs\\qm",
+        "python": "3.12.13",
+        "total_pacotes": 73,
+        "n_conda": 71,
+        "n_pip": 2,
+        "destaques": {
+          "numpy": {
+            "versao": "2.4.6",
+            "origem": "conda",
+            "categoria": "dados"
+          },
+          "scipy": {
+            "versao": "1.17.1",
+            "origem": "pip",
+            "categoria": "dados"
+          }
+        },
+        "pacotes": {
+          "numpy": "2.4.6",
+          "scipy": "1.17.1"
+        }
+      }
+    ]
+  },
+  "wsl": {
+    "disponivel": true,
+    "avisos": [
+      "Inspecao interna do WSL pulada (--sem-wsl)."
+    ],
+    "versao": [
+      "Versão do WSL: 2.6.1.0",
+      "Versão do kernel: 6.6.87.2-1",
+      "Versão do WSLg: 1.0.66",
+      "Versão do MSRDC: 1.2.6353",
+      "Versão do Direct3D: 1.611.1-81528511",
+      "Versão do DXCore: 10.0.26100.1-240331-1435.ge-release",
+      "Versão do Windows: 10.0.26200.8875"
+    ],
+    "wslconfig": {
+      "caminho": "C:\\Users\\testuser\\.wslconfig",
+      "conteudo": "# Limites da VM do WSL2. Sem este arquivo o WSL2 pode reservar ate metade da\n# RAM do host, disputando memoria com jobs que rodam no Windows.\n[wsl2]\nmemory=16GB\nprocessors=8\nswap=8GB\nlocalhostForwarding=true\nkernelCommandLine=vsyscall=emulate\n"
+    },
+    "distros": [
+      {
+        "nome": "Ubuntu",
+        "estado": "Stopped",
+        "versao_wsl": "2",
+        "padrao": true,
+        "caminho_base": "C:\\Users\\testuser\\AppData\\Local\\wsl\\{0b2c24d5-7878-45b2-93dd-51208c6d29ef}",
+        "vhdx_gb": 34.4,
+        "vhdx": "C:\\Users\\testuser\\AppData\\Local\\wsl\\{0b2c24d5-7878-45b2-93dd-51208c6d29ef}\\ext4.vhdx"
+      },
+      {
+        "nome": "docker-desktop",
+        "estado": "Running",
+        "versao_wsl": "2",
+        "padrao": false,
+        "caminho_base": "C:\\Users\\testuser\\AppData\\Local\\Docker\\wsl\\main",
+        "vhdx_gb": 0.1,
+        "vhdx": "C:\\Users\\testuser\\AppData\\Local\\Docker\\wsl\\main\\ext4.vhdx"
+      }
+    ]
+  },
+  "docker": {
+    "disponivel": true,
+    "versao_cliente": "29.6.1",
+    "versao_servidor": "29.6.1",
+    "runtimes": [
+      "io.containerd.runc.v2",
+      "nvidia",
+      "runc"
+    ],
+    "runtime_nvidia": true,
+    "storage_driver": "overlayfs",
+    "root_dir": "/var/lib/docker",
+    "cpus_visiveis": 8,
+    "ram_visivel_gb": 15.6,
+    "n_imagens": 71,
+    "n_containers": 62,
+    "imagens": [
+      {
+        "repositorio": "sample/app",
+        "tag": "latest",
+        "tamanho": "5.68GB",
+        "id": "dfc2e629ebf1",
+        "criada": "54 minutes ago"
+      },
+      {
+        "repositorio": "sample/tools",
+        "tag": "b692988",
+        "tamanho": "1.2GB",
+        "id": "a1b2c3d4e5f6",
+        "criada": "3 days ago"
+      }
+    ],
+    "containers": [
+      {
+        "nome": "sample_fetch",
+        "imagem": "p4-tools:latest",
+        "status": "Exited (137) 4 days ago",
+        "portas": ""
+      },
+      {
+        "nome": "sample_web",
+        "imagem": "p4-tools:latest",
+        "status": "Up About an hour",
+        "portas": "8000/tcp, 8501/tcp"
+      }
+    ],
+    "volumes": [
+      {
+        "nome": "sample_volume_1",
+        "driver": "local"
+      },
+      {
+        "nome": "Data_Science",
+        "driver": "local"
+      }
+    ]
+  },
+  "programas": {
+    "total": 425,
+    "relevantes": [
+      {
+        "nome": "Python 3.13",
+        "versao": "3.13.9",
+        "fabricante": "Python Software Foundation",
+        "instalado_em": "20260101",
+        "tamanho_mb": 120.0
+      },
+      {
+        "nome": "Docker Desktop",
+        "versao": "29.6.1",
+        "fabricante": "Docker Inc.",
+        "instalado_em": "20260101",
+        "tamanho_mb": 900.0
+      }
+    ],
+    "todos": [],
+    "winget_disponivel": true,
+    "winget_versao": "v1.29.280"
+  },
+  "ferramentas": {
+    "cli": {}
+  },
+  "scripts_config": [],
+  "alertas": [
+    {
+      "nivel": "aviso",
+      "area": "GPU",
+      "titulo": "Clock bem abaixo do maximo",
+      "detalhe": "SM em 210 MHz de 2100 MHz.",
+      "acao": "Verifique temperatura, ventilacao e os motivos de throttle.",
+      "reparo": null
+    },
+    {
+      "nivel": "aviso",
+      "area": "GPU",
+      "titulo": "Reducao de clock ativa",
+      "detalhe": "Motivos ativos: Idle.",
+      "acao": null,
+      "reparo": null
+    },
+    {
+      "nivel": "aviso",
+      "area": "Armazenamento",
+      "titulo": "Disco C: em 93.4%",
+      "detalhe": "Restam 61.6 GB.",
+      "acao": "Libere espaco: cache de modelos, imagens Docker antigas e saidas intermediarias.",
+      "reparo": null
+    },
+    {
+      "nivel": "info",
+      "area": "GPU",
+      "titulo": "PCIe em Gen1 (maximo Gen3)",
+      "detalhe": "O link cai de geracao quando ocioso; so preocupa se ficar assim sob carga com muita transferencia host-device.",
+      "acao": null,
+      "reparo": null
+    },
+    {
+      "nivel": "info",
+      "area": "Sistema",
+      "titulo": "Agendamento de GPU por hardware nao determinado",
+      "detalhe": "A chave HwSchMode nao existe no registro, ou seja, a opcao nunca foi alterada e vale o padrao do driver. Nao da para afirmar pelo registro se esta ligada.",
+      "acao": "Confira em Configuracoes > Tela > Graficos > Configuracoes graficas padrao. Se ja estiver ligada, nao ha o que fazer.",
+      "reparo": null
+    },
+    {
+      "nivel": "info",
+      "area": "Sistema",
+      "titulo": "Seguranca baseada em virtualizacao (VBS) ativa",
+      "detalhe": "VBS/HVCI custa alguns por cento de CPU e I/O. Mantenha se a maquina guarda dado sensivel; e um custo consciente, nao um defeito.",
+      "acao": null,
+      "reparo": null
+    },
+    {
+      "nivel": "ok",
+      "area": "Docker",
+      "titulo": "Runtime NVIDIA ja registrado",
+      "detalhe": "O daemon lista o runtime 'nvidia'. Containers com --gpus all enxergam a placa; nao ha o que instalar.",
+      "acao": null,
+      "reparo": null
+    }
+  ],
+  "backup": [
+    {
+      "item": "Ambientes conda exportados (.yml)",
+      "ok": false,
+      "detalhe": "6 ambientes detectados. Rode backup_servidor.ps1 para exportar environment.yml + pip freeze de cada um.",
+      "criticidade": "alta"
+    },
+    {
+      "item": "Distros WSL exportadas (.tar)",
+      "ok": false,
+      "detalhe": "1 distro(s) de usuario. 'wsl --export' gera um tar restauravel com 'wsl --import'.",
+      "criticidade": "alta"
+    },
+    {
+      "item": "Imagens Docker registradas",
+      "ok": true,
+      "detalhe": "2 imagens. Salve a lista e os Dockerfiles; 'docker save' so para imagens sem origem em registry.",
+      "criticidade": "media"
+    },
+    {
+      "item": "Lista de programas / winget export",
+      "ok": true,
+      "detalhe": "winget disponivel: da para gerar um manifesto reinstalavel.",
+      "criticidade": "media"
+    },
+    {
+      "item": "Chaves de registro de desempenho (HAGS/TDR)",
+      "ok": true,
+      "detalhe": "Coletadas neste inventario; o script de backup as exporta em .reg.",
+      "criticidade": "baixa"
+    },
+    {
+      "item": "Imagem completa do disco (bare metal)",
+      "ok": false,
+      "detalhe": "Inventario + scripts recriam o AMBIENTE, nao um clone bit-a-bit. Para restaurar identico, use imagem de disco (wbadmin/Macrium/Veeam) num destino externo.",
+      "criticidade": "alta"
+    },
+    {
+      "item": "Espaco livre para o backup",
+      "ok": false,
+      "detalhe": "Unidades acima de 90%: ['C:']",
+      "criticidade": "media"
+    }
+  ]
+}

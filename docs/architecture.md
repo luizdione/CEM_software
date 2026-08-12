@@ -40,6 +40,7 @@ are thin adapters over that logic.
 | `@cem/backup` | shared, core, crypto, scanner | `.cem` planning & writing |
 | `@cem/restore` | shared, core, crypto | `.cem` reading, verification, restore |
 | `@cem/usage` | shared, core | Temporal token-usage analytics from local transcripts |
+| `@cem/server-inventory` | shared | Native machine inventory (host/GPU/conda/WSL/Docker) + threshold alerts |
 | `@cem/sync` | shared, core | Optional, explicit Git sync of backups |
 
 The graph is acyclic. Because dependencies only point "inward", any package can be extracted and

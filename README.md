@@ -6,7 +6,7 @@
 
 [![CI](https://github.com/luizdione/CEM_software/actions/workflows/ci.yml/badge.svg)](https://github.com/luizdione/CEM_software/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![Semantic Versioning](https://img.shields.io/badge/semver-1.3.2-green.svg)](https://semver.org)
+[![Semantic Versioning](https://img.shields.io/badge/semver-1.4.0-green.svg)](https://semver.org)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg)](https://nodejs.org)
 
 </div>
@@ -27,6 +27,12 @@ arquivos locais documentados**, e permite empacotá‑los em um arquivo `.cem` (
 checksums e criptografia opcional AES‑256) para reinstalar tudo em outro computador com poucos
 cliques. O CEM **nunca** modifica binários da Anthropic, nem burla limites, autenticação ou APIs
 privadas.
+
+A partir da **1.4.0**, o CEM inclui também a seção **Server Inventory**: um inventário
+**somente‑leitura** da máquina inteira — CPU/discos/RAM, GPU NVIDIA (incluindo a métrica de
+*sysmem fallback*, a VRAM que transbordou para a RAM e é invisível ao `nvidia‑smi`), ambientes
+conda, distros WSL, Docker, programas instalados e scripts de configuração — com alertas de
+gargalo e um checklist de prontidão para backup.
 
 ---
 
@@ -53,6 +59,7 @@ Claude Code, install CEM, import the `.cem`, and your environment is back.
 | **Token Usage (temporal)** | Real consumption over **24h / 3d / 7d / 30d** per session & project from local transcripts: context‑window reading vs cache building vs output; main session vs workflow agents; git/GitHub activity; skill/agent launches — with statistical improvement proposals (branch heavy sessions, shrink heavy `CLAUDE.md`/skills, batch pushes) |
 | **Profiles** | Activate a subset of config/docs per workflow (Development, Research, Bioinformatics, Python, Next.js, Docker, …) |
 | **Diagnostics** | Orphan references, broken MCP configs, duplicates, token bloat |
+| **Server Inventory** | Read‑only machine inventory: host/CPU/disks/RAM, NVIDIA GPU (VRAM, clocks, power, temp, throttle) with the Windows **"sysmem fallback"** metric invisible to `nvidia-smi`, conda envs, WSL, Docker, installed programs, CLI tools and config scripts — with threshold alerts and a backup‑readiness checklist |
 | **Solve problems** | One click proposes the best fix per finding; you **accept or ignore** each — with automatic backups and audit logging (`cem fix`) |
 | **Backup / Restore** | Create and restore `.cem` archives with checksums, integrity verification and selective restore |
 | **Encryption** | AES‑256‑GCM payload encryption with Argon2id key derivation + Ed25519 signing primitives |
@@ -63,7 +70,8 @@ Claude Code, install CEM, import the `.cem`, and your environment is back.
 
 > Screenshots are being prepared. Run `pnpm dev:desktop` to explore the app: Dashboard with the
 > per‑project token‑usage chart, the Token Usage tab (24h/3d/7d/30d), Diagnostics with
-> **Solve problems**, MCP/Skills/Agents managers, Backup/Restore and Sync.
+> **Solve problems**, the **Server Inventory** tab (GPU/CPU, conda, WSL, Docker, alerts),
+> MCP/Skills/Agents managers, Backup/Restore and Sync.
 
 ## 🧭 Objectives
 
@@ -193,6 +201,7 @@ CEM/
 │   ├── profiles/    # profile CRUD, matching, templates
 │   ├── diagnostics/ # health checks, token rollups + fix remediation
 │   ├── usage/       # temporal token-usage analytics (local transcripts)
+│   ├── server-inventory/ # native machine inventory (host/GPU/conda/WSL/Docker) + alerts
 │   ├── sync/        # optional, explicit Git sync of backups
 │   ├── backup/      # .cem planner & writer
 │   └── restore/     # read, verify, restore

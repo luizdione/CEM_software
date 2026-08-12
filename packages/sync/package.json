@@ -1,6 +1,6 @@
 {
   "name": "@cem/sync",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Optional, explicit synchronization of CEM backups (Git provider). Never sends data automatically.",
   "type": "module",
   "license": "MIT",
