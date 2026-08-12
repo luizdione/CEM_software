@@ -28,6 +28,12 @@ checksums e criptografia opcional AES‑256) para reinstalar tudo em outro compu
 cliques. O CEM **nunca** modifica binários da Anthropic, nem burla limites, autenticação ou APIs
 privadas.
 
+A partir da **1.4.0**, o CEM inclui também a seção **Server Inventory**: um inventário
+**somente‑leitura** da máquina inteira — CPU/discos/RAM, GPU NVIDIA (incluindo a métrica de
+*sysmem fallback*, a VRAM que transbordou para a RAM e é invisível ao `nvidia‑smi`), ambientes
+conda, distros WSL, Docker, programas instalados e scripts de configuração — com alertas de
+gargalo e um checklist de prontidão para backup.
+
 ---
 
 ## What is CEM?
@@ -64,7 +70,8 @@ Claude Code, install CEM, import the `.cem`, and your environment is back.
 
 > Screenshots are being prepared. Run `pnpm dev:desktop` to explore the app: Dashboard with the
 > per‑project token‑usage chart, the Token Usage tab (24h/3d/7d/30d), Diagnostics with
-> **Solve problems**, MCP/Skills/Agents managers, Backup/Restore and Sync.
+> **Solve problems**, the **Server Inventory** tab (GPU/CPU, conda, WSL, Docker, alerts),
+> MCP/Skills/Agents managers, Backup/Restore and Sync.
 
 ## 🧭 Objectives
 
@@ -194,6 +201,7 @@ CEM/
 │   ├── profiles/    # profile CRUD, matching, templates
 │   ├── diagnostics/ # health checks, token rollups + fix remediation
 │   ├── usage/       # temporal token-usage analytics (local transcripts)
+│   ├── server-inventory/ # native machine inventory (host/GPU/conda/WSL/Docker) + alerts
 │   ├── sync/        # optional, explicit Git sync of backups
 │   ├── backup/      # .cem planner & writer
 │   └── restore/     # read, verify, restore
