@@ -1,3 +1,8 @@
+> [!WARNING]
+> **This repository is retired and frozen at v1.4.0.** The official CEM now lives at [luizdione/Platform_CEM](https://github.com/luizdione/Platform_CEM) (v1.5.0 and later), distributed as an installer under a non-commercial license. The code here remains available under the MIT License, as released up to v1.4.0, but receives no further updates.
+>
+> **Repositório aposentado, congelado na v1.4.0.** A versão oficial do CEM está em [luizdione/Platform_CEM](https://github.com/luizdione/Platform_CEM) (v1.5.0 em diante), distribuída como instalador sob licença de uso não comercial. O código daqui segue disponível sob a licença MIT, como publicado até a v1.4.0, mas não recebe mais atualizações.
+
 <div align="center">
 
 # Claude Environment Manager (CEM)
